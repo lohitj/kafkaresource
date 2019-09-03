@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+    <short>jmxexporter</short>
+    <description>JMX ports used to provide an http(s) interface to jmx metrics exposed on Java JVM.</description>
+    <port protocol="tcp" port="5575-5580"/>
+</service>
