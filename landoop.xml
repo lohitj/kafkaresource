@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>landoop</short>
+  <description>Enable Landoop UI component ports.</description>
+  <port protocol="tcp" port="8000"/>
+  <port protocol="tcp" port="8001"/>
+  <port protocol="tcp" port="8003"/>
+</service>
