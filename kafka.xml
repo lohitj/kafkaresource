@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>Kafka</short>
+  <description>Enables Confluent Kafka component ports.  Services include:   Zooeeper, Apache Kafka broker (plain text), Schema Registry API, REST Proxy API, and Kafka Connect REST API</description>
+  <port protocol="tcp" port="2181"/>
+  <port protocol="tcp" port="9092"/>
+  <port protocol="tcp" port="8081"/>
+  <port protocol="tcp" port="8082"/>
+  <port protocol="tcp" port="8083"/>
+</service>
