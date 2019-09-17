@@ -1,0 +1,34 @@
+sudo apt-get update && sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-common -y && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - && sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable" && sudo apt-get update && sudo apt-get install docker-ce -y && sudo usermod -aG docker ubuntu
+apt-get update && apt-get install -y apt-transport-https curl
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+cat <<EOF >/etc/apt/sources.list.d/kubernetes.list
+deb https://apt.kubernetes.io/ kubernetes-xenial main
+EOF
+apt-get update
+apt-get install -y kubelet kubeadm kubectl
+apt-mark hold kubelet kubeadm kubectl
+
+
+
+
+https://kubernetes.io/docs/setup/independent/install-kubeadm/
+
+kubeadm init --> creating the master
+Download the necessary images
+exit --> it will logout
+To start using cluster commands :
+mkdir -p $HOME/.kube
+sudo cp i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+cat ~/config
+kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+kubectl get nodes
+kubectl taint nodes --all node-role.kubernetes.io/master-
+
